@@ -1,4 +1,3 @@
-
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -89,7 +88,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Projects <span className="text-purple-600">With AI-Powered Love 💕</span>
+          Projects
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Projects
@@ -106,4 +105,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-
