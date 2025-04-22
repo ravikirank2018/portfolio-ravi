@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           Projects <span className="text-purple-600">With AI-Powered Love 💕</span>
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          A showcase of Ravi's technical skills through projects that solve real-world problems.
+          Projects
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -106,3 +106,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
