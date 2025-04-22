@@ -11,8 +11,8 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
-// Import profile image if available
-import profileImage from "/public/ravi-profile.jpg"; // This path would need to be updated if you upload an image
+// Import profile image
+import profileImage from "/ravi-profile.jpg";
 
 const Index = () => {
   // State to track if image loaded successfully
