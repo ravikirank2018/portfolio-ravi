@@ -1,13 +1,14 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 const AchievementCard = ({ 
   title, 
   items 
 }: { 
   title: string; 
-  items: Array<{ icon: string; text: string; link?: string }>;
+  items: Array<{ icon: string; text: string; link?: string; highlight?: boolean }>;
 }) => {
   return (
     <Card className="overflow-hidden border-gray-200">
@@ -18,7 +19,13 @@ const AchievementCard = ({
       <CardContent className="p-6">
         <ul className="space-y-4">
           {items.map((item, index) => (
-            <li key={index} className="flex items-start gap-3">
+            <li 
+              key={index} 
+              className={cn(
+                "flex items-start gap-3",
+                item.highlight && "bg-indigo-50 p-3 rounded-lg border border-indigo-100"
+              )}
+            >
               <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
               <div>
                 {item.link ? (
@@ -26,9 +33,19 @@ const AchievementCard = ({
                     href={item.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 hover:text-purple-700 hover:underline"
+                    className={cn(
+                      "hover:underline",
+                      item.highlight 
+                        ? "text-indigo-600 hover:text-indigo-700 font-medium" 
+                        : "text-purple-600 hover:text-purple-700"
+                    )}
                   >
                     {item.text}
+                    {item.highlight && (
+                      <Badge className="ml-2 bg-indigo-600 hover:bg-indigo-700 text-white">
+                        Featured
+                      </Badge>
+                    )}
                   </a>
                 ) : (
                   <span>{item.text}</span>
@@ -65,9 +82,10 @@ const AchievementsSection = () => {
     title: "Certifications",
     items: [
       { 
-        icon: "✅", 
+        icon: "🏆", 
         text: "ServiceNow Certified System Administrator (CSA) — Certified by ServiceNow", 
-        link: "https://drive.google.com/file/d/1bBiBZPOFfkEOOhPe7Uov9KAgbqMbyKOh/view"
+        link: "https://drive.google.com/file/d/1bBiBZPOFfkEOOhPe7Uov9KAgbqMbyKOh/view",
+        highlight: true
       },
       { 
         icon: "✅", 

@@ -11,27 +11,13 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
-// Import profile image
-import profileImage from "/ravi-profile.jpg";
-
 const Index = () => {
-  // State to track if image loaded successfully
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  // Check if image exists
-  useEffect(() => {
-    const img = new Image();
-    img.src = profileImage;
-    img.onload = () => setImageLoaded(true);
-    img.onerror = () => setImageLoaded(false);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
       <NavBar />
       
       <main>
-        <HeroSection imageSrc={imageLoaded ? profileImage : undefined} />
+        <HeroSection />
         <AboutSection />
         <ProjectsSection />
         <ExperienceSection />
