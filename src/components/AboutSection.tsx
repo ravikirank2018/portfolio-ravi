@@ -41,7 +41,7 @@ const AboutSection = () => {
                   <span className="text-xl mr-2">📚</span>
                   <span className="font-medium">Academic:</span>
                 </p>
-                <p>GPA: 8.62</p>
+                <p>GPA: 8.48</p>
               </div>
               
               <div className={cn(

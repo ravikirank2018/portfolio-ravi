@@ -66,6 +66,11 @@ const AchievementsSection = () => {
     items: [
       { 
         icon: "✅", 
+        text: "ServiceNow Certified System Administrator (CSA) — Certified by ServiceNow", 
+        link: "https://drive.google.com/file/d/1bBiBZPOFfkEOOhPe7Uov9KAgbqMbyKOh/view"
+      },
+      { 
+        icon: "✅", 
         text: "DSA – HackerRank", 
         link: "https://www.hackerrank.com/certificates/57f67e2ac4e3"
       },
